@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use('/api/v1', productsRouter)
-// app.use("/api/v2", productsRouter2)
+app.use("/api/v2", productsRouter2)
 
 app.use("/", (req, res) => {
   res.send({
