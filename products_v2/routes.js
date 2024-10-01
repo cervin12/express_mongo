@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const upload = require("../config/multer");
-const Product = require("../products/products");
+const Product = require("../products_v2/products");
 
 router.post("/product", upload.single('image_url') ,async (req, res) => {
   const { user_id, name, price, stock, status } = req.body;
